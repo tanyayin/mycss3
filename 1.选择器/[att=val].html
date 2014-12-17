@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>[att*=val] [att^=val] [att$=val] </title>
+<style type="text/css">
+p{color:#06F;font-weight:bold;}
+p span {color:#F00;}
+li {height:30px;}
+
+[id*=section1]{background:#993;}  
+[id^=section2] {background:#06F;}
+[id$=section3]{background:#F6C;}  
+a[href$=png]:after{ content:"这个链接是个图片！";color:#93C;}  
+</style>
+</head>
+
+<body>
+<p><span>[att*=val]</span> 如果元素用att表示的属性的属性值中包含用val指定的字符，则该元素使用这个样式</p>
+<ul>
+  <li id="v_section1">1</li>  
+  <li id="section1_l">1-1</li>
+  <li id="s_section1_s1">2</li>
+  <li id="s_ection1-1">2-1</li>
+</ul>
+<br>
+<p><span>[id^=val]</span> 如果元素用att表示的属性的属性值的开头字符为val指定的字符，则该元素使用这个样式</p>
+<ul>
+  <li id="v_section2">1</li>  
+  <li id="section2_l">1-1</li>
+  <li id="section_section2">2</li>
+  <li id="section2-1">2-1</li>
+</ul>
+<br>
+<p><span>[id$=val]</span> 如果元素用att表示的属性的属性值的结尾字符为val指定的字符，则该元素使用这个样式</p>
+<ul>
+  <li id="v_section3">1</li>  
+  <li id="section3_l">1-1</li>
+  <li id="section3_section3">2</li>
+  <li id="section3-1">2-1</li>
+</ul>
+
+<br>
+<p><span>[id$=val]</span> 例子：在li里添加文字</p>
+<ul>
+  <li><a href="/">1</a></li>  
+  <li><a href="#">1-1</a></li>
+  <li><a href="pic.png">cfv c</a></li>
+</ul>
+
+</body>
+</html>

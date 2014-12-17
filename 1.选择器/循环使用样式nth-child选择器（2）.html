@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>css3选择器</title>
+<style type="text/css">
+h3 {color:#F3F;}
+#ul1 li:first-child{background:#F00;}
+#ul1 li:last-child {background:#00F;color:#fff;}
+
+#ul2 li:nth-child(2){background:#0CF;color:#FF0;}
+#ul2 li:nth-last-child(2){background:#90C;color:#fff;}
+
+#ul3 li:nth-child(odd){background:#090;}
+#ul4 li:nth-child(even){color:#a00;font-weight:bold;}
+
+#div1 h4:nth-child(odd) {background:#ccc;}
+#div1 h4:nth-child(even) {background:#FF0;}
+
+#div2 h4:nth-of-type(odd) {background:#ccc;}
+#div2 h4:nth-of-type(even) {background:#FF0;}
+
+</style>
+</head>
+
+<body>
+<h3>first-child和last-child选择器</h3>
+<ul id="ul1">
+  <li>列表1</li>
+  <li>列表2</li>
+  <li>列表3</li>
+  <li>列表4</li>
+  <li>列表5</li>
+</ul>
+<h3>nth-child和nth-last-child选择器</h3>
+<p>nth-child从第一个元素开始<br>
+  nth-last-child从最后一个元素开始<br>
+  其中":nth-last-child(1)"和":last-child"所起作用是一样的，都表示的是选择最后一个元素。 
+</p>
+<ul id="ul2">
+  <li>列表1</li>
+  <li>列表2</li>
+  <li>列表3</li>
+  <li>列表4</li>
+  <li>列表5</li>
+</ul>
+
+<h3>奇数个元素选择 :nth-child(odd)</h3>
+<ul id="ul3">
+  <li>列表1</li>
+  <li>列表2</li>
+  <li>列表3</li>
+  <li>列表4</li>
+  <li>列表5</li>
+</ul>
+
+<h3>偶数个元素选择 :nth-child(even)</h3>
+<ul id="ul4">
+  <li>列表1</li>
+  <li>列表2</li>
+  <li>列表3</li>
+  <li>列表4</li>
+  <li>列表5</li>
+</ul>
+
+<h3>nth-child存在的bug</h3>
+<p>nth-child选择器在计算子元素是第奇数个元素还是第偶数个元素时，是连同父元素中的所有div元素中的第奇数个子元素，换句话说h4:nth-child(odd)不是针对div元素中第奇数个h4子元素来使用，是指当div元素中的第奇数个子元素如果是h4子元素时使用，如果不是将不使用，所以h4:nth-child(even)不被使用</p>
+<div id="div1">
+<h4>文章标题A</h4>
+<p>文章正文</p>
+<h4>文章标题B</h4>
+<p>文章正文</p>
+<h4>文章标题C</h4>
+<p>文章正文</p>
+<h4>文章标题D</h4>
+<p>文章正文</p>
+</div>
+
+<h3>解决方案：nth-of-type和nth-last-of-type</h3>
+<div id="div2">
+<h4>文章标题A</h4>
+<p>文章正文</p>
+<h4>文章标题B</h4>
+<p>文章正文</p>
+<h4>文章标题C</h4>
+<p>文章正文</p>
+<h4>文章标题D</h4>
+<p>文章正文</p>
+</div>
+
+
+</body>
+</html>

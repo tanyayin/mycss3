@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>not，empty，target</title>
+<style type="text/css">
+section :not(h1){background:#6F9;}
+table :empty{background:#CCC;}/***table中空白的表格选择此样式**/
+p a{margin:0 10px;}
+:target{background:#CCC;}
+</style>
+</head>
+
+<body>
+<section>
+<h1>not选择器</h1>
+<article>如果想对某个结构元素使用样式，但是想排除这个结构元素下面的子结构元素，让它不使用这个样式时，可以使用not选择器。</article>
+</section>
+<p><h3>empty选择器：table中空白的表格选择此样式</h3></p>
+<table width="200" border="1">
+  <tr>
+    <td>a</td>
+    <td>b</td>
+    <td></td> 
+  </tr>
+  <tr>
+    <td>c</td>
+    <td>d</td>
+    <td>e</td>
+  </tr>
+</table>
+<p><h3>target选择器</h3></p>
+<p><a href="#t1">实例1</a>|<a href="#t2">实例2</a>|<a href="#t3">实例3</a>|<a href="#t4">实例4</a>|<a href="#t5">实例5</a></p>
+<div id="t1">
+ <h3>实例1</h3>
+ <p>此处很无语</p>
+</div>
+
+<div id="t2">
+ <h3>实例1</h3>
+ <p>此处很无语</p>
+</div>
+<div id="t3">
+ <h3>实例2</h3>
+ <p>此处很无语</p>
+</div>
+<div id="t4">
+ <h3>实例3</h3>
+ <p>此处很无语</p>
+</div>
+
+<div id="t5">
+ <h3>实例4</h3>
+ <p>此处很无语</p>
+</div>
+
+<div id="t6">
+ <h3>实例5</h3>
+ <p>此处很无语</p>
+</div>
+
+
+
+
+
+
+</body>
+</html>
